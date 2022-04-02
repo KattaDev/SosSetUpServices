@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sossetupservice/core/constants/colors.dart';
-import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/firstDrop/dropfirstwhere_cubit.dart';
 import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/secondDrop/dropdownsecondwhere_cubit.dart';
 import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/secondDrop/dropdownsecondwhere_state.dart';
 
@@ -17,6 +16,7 @@ class DropDownSecondWhereView extends StatelessWidget {
         builder: (context, state) {
           var _context = context.watch<DropdownsecondwhereCubit>();
           return DropdownButton(
+            isExpanded: true,
             hint: Text(
               "Tanlang",
               style: TextStyle(
@@ -28,9 +28,9 @@ class DropDownSecondWhereView extends StatelessWidget {
               color: Colors.transparent,
             ),
             onChanged: (v) {
-              context.read<DropfirstwhereCubit>().changeCountry(v);
+              context.read<DropdownsecondwhereCubit>().changeCountry(v);
             },
-            value: _context.dropdownValue,
+            value: _context.dropdownValueS,
             items: [
               DropdownMenuItem(
                 value: "TAS",

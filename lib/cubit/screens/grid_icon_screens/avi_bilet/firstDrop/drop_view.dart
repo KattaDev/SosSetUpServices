@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sossetupservice/core/constants/colors.dart';
 import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/firstDrop/dropfirstwhere_cubit.dart';
 import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/firstDrop/dropfirstwhere_state.dart';
-import 'package:sossetupservice/main.dart';
 
 class DropDownFirstWhereView extends StatelessWidget {
   const DropDownFirstWhereView({Key? key}) : super(key: key);
@@ -17,6 +16,7 @@ class DropDownFirstWhereView extends StatelessWidget {
         builder: (context, state) {
           var _context = context.watch<DropfirstwhereCubit>();
           return DropdownButton(
+            isExpanded: true,
             hint: Text(
               "Tanlang",
               style: TextStyle(
@@ -30,7 +30,7 @@ class DropDownFirstWhereView extends StatelessWidget {
             onChanged: (v) {
               context.read<DropfirstwhereCubit>().changeCountry(v);
             },
-            value: _context.dropdownValue,
+            value: _context.dropdownValueF,
             items: [
               DropdownMenuItem(
                 value: "TAS",

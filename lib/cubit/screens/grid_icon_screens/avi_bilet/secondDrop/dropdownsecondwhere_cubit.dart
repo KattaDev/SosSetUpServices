@@ -4,10 +4,10 @@ import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/second
 
 class DropdownsecondwhereCubit extends Cubit<DropdownsecondwhereState> {
   DropdownsecondwhereCubit() : super(DropdownsecondwhereInitial());
-  var dropdownValue = null;
+  var dropdownValueS = null;
 
   changeCountry(var tappedIndex) {
-    dropdownValue = tappedIndex;
+    dropdownValueS = tappedIndex;
     emit(DropdownsecondwhereInitial());
   }
 }

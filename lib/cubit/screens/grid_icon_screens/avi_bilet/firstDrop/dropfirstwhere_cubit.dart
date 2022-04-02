@@ -3,10 +3,10 @@ import 'package:sossetupservice/cubit/screens/grid_icon_screens/avi_bilet/firstD
 
 class DropfirstwhereCubit extends Cubit<DropfirstwhereState> {
   DropfirstwhereCubit() : super(DropfirstwhereInitial());
-  var dropdownValue = null;
+  var dropdownValueF = null;
 
   changeCountry(var tappedIndex) {
-    dropdownValue = tappedIndex;
+    dropdownValueF = tappedIndex;
     emit(DropfirstwhereInitial());
   }
 }

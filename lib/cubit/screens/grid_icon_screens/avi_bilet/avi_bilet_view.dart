@@ -33,41 +33,61 @@ class AviTicketViewCubit extends StatelessWidget {
             ),
             SizedBox(height: 15.h),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.h),
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        "Qayerdan",
-                        style: TextStyle(
-                          color: whiteColor,
-                          fontSize: 25.h,
-                        ),
-                      ),
-                      SizedBox(height: 10.h),
-                      Container(
-                        width: 200.w,
-                        child: const DropDownFirstWhereView(),
-                      ),
-                    ],
+                  Text(
+                    "Qayerdan",
+                    style: TextStyle(
+                      fontSize: 25.h,
+                      color: whiteColor,
+                    ),
                   ),
-                  Column(
-                    children: [
-                      Text(
-                        "Qayerga",
-                        style: TextStyle(
-                          color: whiteColor,
-                          fontSize: 25.h,
-                        ),
-                      ),
-                      SizedBox(height: 10.h),
-                      Container(
-                        width: 200.w,
-                        child:  const DropDownSecondWhereView(),
-                      ),
-                    ],
+                  Text(
+                    "Qayerga",
+                    style: TextStyle(
+                      fontSize: 25.h,
+                      color: whiteColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10.h),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Row(
+                children: [
+                  const Expanded(
+                    flex: 1,
+                    child: DropDownFirstWhereView(),
+                  ),
+                  Image.asset(
+                    "assets/images/air.png",
+                    height: 30.h,
+                  ),
+                  const Expanded(
+                    flex: 1,
+                    child: DropDownSecondWhereView(),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    height: 30.h,
+                    width: 30.w,
+                    color: greenColor,
+                  ),
+                  Container(
+                    height: 30.h,
+                    width: 30.w,
+                    color: greenColor,
                   ),
                 ],
               ),
